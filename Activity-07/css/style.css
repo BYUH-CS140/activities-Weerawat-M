@@ -7,7 +7,17 @@
         header {
             background-color: blanchedalmond;
             color: burlywood;
-            text-align: center;}
+            
+            text-align: center;
+/***New Style.**** This added interactive pointer when hover on the header*/
+            color: darkgoldenrod;
+            cursor: pointer;
+            font-size: 2em;
+            text-shadow: 1px 1px 2px #ccc;
+
+/***New Style.**** This makes the shadow so it looks like this the box is floating*/
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgb(139, 136, 136);}
 
         /* this part makes the main title to be in the color of kind of green and center of the page */
          #Title {
@@ -22,7 +32,14 @@
             height: auto;
             max-width: 600px;
             display: block;
-            margin: 0 auto;}
+            margin: 0 auto;
+        
+/****New Style.**** This added the frame for the image*/
+            border: 10px solid #b69e74;
+/****New Style.**** This added shadow on the frame*/
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);}
+
+
             /* This part makes control the size of text, color and alignment of credit of the pic */
         p {
             font-size: 0.9em;
@@ -32,7 +49,8 @@
         footer {
             background-color: rgb(255, 235, 205);
             text-align: center;
-            padding: 10px 0;}
+            font-size: 0.8em;
+            color: #311a1a;}
 
             /*Color of Pixaday*/
-        a {color: gray;}
+        a {color: rgb(52, 25, 25);}
