@@ -1,0 +1,82 @@
+
+        body {background-color: rgb(210, 205, 169); }
+        
+
+        header {
+            background-color: rgb(249, 249, 249);
+            color: burlywood;
+            
+            text-align: center;
+            color: darkgoldenrod;
+            cursor: pointer;
+            font-size: 2em;
+            text-shadow: 1px 1px 2px #ccc;
+
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgb(139, 136, 136);}
+
+         #Title {
+            color: rgb(174, 146, 114);
+            text-align: center;}
+
+          #Topic {
+            color: rgb(174, 146, 114);
+            text-align: center;}
+
+          #TopicBig {
+            color: rgb(174, 146, 114);
+            text-align: center;}
+
+          
+          #TopicSmall {
+            color: rgb(174, 146, 114);
+            text-align: center;}
+
+
+        .image {
+            border-radius: 15px;
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+            display: block;
+            margin: 0 auto;
+        
+            border: 10px solid #b69e74;
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);}
+
+
+        p {
+            font-size: 0.9em;
+            color: gray;
+            text-align: center;}
+        footer {
+            background-color: rgb(255, 235, 205);
+            text-align: center;
+            font-size: 0.8em;
+            color: #311a1a;}
+
+        a {color: rgb(52, 25, 25);}
+
+        .titillium-web-extralight {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        }
+
+            ul.nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    ul.nav li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    ul.nav li a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
