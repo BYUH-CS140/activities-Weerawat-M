@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #000000;
+}
+
+#page-header {
+    background-image: url("pattern-bg.png");
+    background-size: cover;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2em;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px #ccc;
+    box-shadow: 0 2px 5px rgb(139, 136, 136);
+}
+
+
+.title {
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+}
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+
+.nav-list > li {
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+
+.nav-list a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+
+.nav-list a:hover {
+    color: #333333;
+    background-color: #ffffff;
+}
+
+
+#Title {
+    color: rgb(174, 146, 114);
+    text-align: center;
+}
+
+#Title-2 {
+    color: rgb(174, 146, 114);
+    text-align: center;
+}
+
+
+.image {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+    border: 10px solid #b69e74;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+p {
+    font-size: 0.9em;
+    color: gray;
+    text-align: center;
+}
+
+
+footer {
+    background-color: rgb(255, 235, 205);
+    text-align: center;
+    font-size: 0.8em;
+    color: #311a1a;
+}
+
+
+a {
+    color: rgb(255, 255, 255);
+}
+
+
+
+.titillium-web-extralight {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+.resources {
+    background-color: #b69e74;
+    padding: 1rem;
+    border-radius: 6px;
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.resources li {
+    margin-bottom: 0.5rem;
+}
