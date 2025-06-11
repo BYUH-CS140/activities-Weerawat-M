@@ -3,19 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Layout</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Activity 14</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <nav>Navigation</nav>
-  <header>Header</header>
+  <nav>
+    <ul class="nav-list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Welcome</h1>
+  </header>
+
   <main>
-    <section class="gallery">
-      <img src="images/kangaroo-7824664_640.jpg" alt="Gallery image 1" />
-      <img src="images/koala-630117_640.jpg" alt="Gallery image 2" />
-      <img src="images/lizard-7870567_640.jpg" alt="Gallery image 3" />
+    <section class="intro">
+      <h2>Welcome</h2>
+      <p>This is the introduction section of the page.</p>
+    </section>
+
+    <section class="columns gallery">
+      <article>
+        <h3>Column 1</h3>
+        <img src="images/kangaroo-7824664_640.jpg" alt="Gallery image 1" />
+        <p>Test the first column.</p>
+      </article>
+
+      <article>
+        <h3>Column 2</h3>
+        <img src="images/koala-630117_640.jpg" alt="Gallery image 2" />
+        <p>Test the second column.</p>
+      </article>
+
+      <article>
+        <h3>Column 3</h3>
+        <img src="images/lizard-7870567_640.jpg" alt="Gallery image 3" />
+        <p>Test the third column.</p>
+      </article>
     </section>
   </main>
-  <footer>Footer</footer>
+
+  <footer>
+    <p>&copy; Weerawat Meepralom 2025</p>
+  </footer>
 </body>
 </html>
