@@ -1,6 +1,6 @@
-/* styles.css */
 
-/* Base (Mobile First) */
+
+/* Mobile */
 body {
   background-color: rgb(210, 205, 169);
   font-family: Arial, sans-serif;
@@ -25,18 +25,6 @@ h1, h2, h3 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .image {
   border-radius: 15px;
   width: 100%;
@@ -50,16 +38,10 @@ h1, h2, h3 {
 
 
 
-
-
-
-
-
-
 p, .credit {
   font-size: 0.95em;
   color: gray;
-  text-align: middle;
+  text-align: center;
   margin: 10px 20px;
   
 }
@@ -73,25 +55,6 @@ footer {
   color: #311a1a;
   padding: 10px 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -129,32 +92,6 @@ ul.nav li a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
