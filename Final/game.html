@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Boxing Game</title>
+
+
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #6e7871;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .ring {
+      width: 600px;
+      height: 300px;
+      margin: 0 auto;
+      background: #444;
+      position: relative;
+      border: 5px solid #888;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .boxer {
+      width: 80px;
+      height: 150px;
+      position: absolute;
+      bottom: 0;
+      transition: transform 0.2s;
+    }
+
+    .player {
+      left: 50px;
+    }
+
+    .cpu {
+      right: 50px;
+    }
+
+    .body {
+      width: 50px;
+      height: 100px;
+      background: red;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    .head {
+      width: 50px;
+      height: 50px;
+      background: pink;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+
+    .health-container {
+      width: 600px;
+      margin: 20px auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .health-bar {
+      width: 250px;
+      height: 20px;
+      background: green;
+      border-radius: 5px;
+      transition: width 0.3s;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background: orange;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 22px;
+    }
+
+    .punch {
+      transform: translateX(30px);
+    }
+
+    .cpu-punch {
+      transform: translateX(-30px);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🥊 Stickman Boxing</h1>
+
+  <div class="health-container">
+    <div id="playerHealth" class="health-bar"></div>
+    <div id="cpuHealth" class="health-bar"></div>
+  </div>
+
+  <div class="ring">
+    <div class="boxer player" id="player">
+      <div class="head"></div>
+      <div class="body"></div>
+    </div>
+    <div class="boxer cpu" id="cpu">
+      <div class="head"></div>
+      <div class="body"></div>
+    </div>
+  </div>
+
+  <button onclick="punch()">👊 Punch!</button>
+
+  <div id="message"></div>
+
+  <script>
+    let playerHP = 100;
+    let cpuHP = 100;
+
+    const player = document.getElementById("player");
+    const cpu = document.getElementById("cpu");
+    const playerHealth = document.getElementById("playerHealth");
+    const cpuHealth = document.getElementById("cpuHealth");
+    const message = document.getElementById("message");
+
+    function punch() {
+      if (playerHP <= 0 || cpuHP <= 0) return;
+
+      // Player attacks
+      player.classList.add("punch");
+      const damage = Math.floor(Math.random() * 15) + 5;
+      cpuHP -= damage;
+      if (cpuHP < 0) cpuHP = 0;
+      cpuHealth.style.width = cpuHP + "%";
+
+      setTimeout(() => {
+        player.classList.remove("punch");
+      }, 200);
+
+      if (cpuHP <= 0) {
+        message.textContent = "🏆 You win!";
+        return;
+      }
+
+      // CPU attacks after a short delay
+      setTimeout(() => {
+        cpu.classList.add("cpu-punch");
+        const cpuDamage = Math.floor(Math.random() * 15) + 5;
+        playerHP -= cpuDamage;
+        if (playerHP < 0) playerHP = 0;
+        playerHealth.style.width = playerHP + "%";
+
+        setTimeout(() => {
+          cpu.classList.remove("cpu-punch");
+        }, 200);
+
+        if (playerHP <= 0) {
+          message.textContent = "💀 You lost!";
+        }
+      }, 500);
+    }
+  </script>
+
+</body>
+</html>

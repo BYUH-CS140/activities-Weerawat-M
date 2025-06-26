@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Click the Button Game</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
+    }
+
+    #game-area {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      border: 2px solid black;
+      margin: 20px auto;
+      background-color: #f0f8ff;
+    }
+
+    #click-btn {
+      position: absolute;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #score {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    #timer {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 Click the Button Game</h1>
+  <div id="timer">Time: 10</div>
+  <div id="score">Score: 0</div>
+
+  <div id="game-area">
+    <button id="click-btn">Click me!</button>
+  </div>
+
+  <script>
+    const button = document.getElementById("click-btn");
+    const gameArea = document.getElementById("game-area");
+    const scoreDisplay = document.getElementById("score");
+    const timerDisplay = document.getElementById("timer");
+
+    let score = 0;
+    let timeLeft = 10;
+
+    function moveButton() {
+      const maxX = gameArea.clientWidth - button.offsetWidth;
+      const maxY = gameArea.clientHeight - button.offsetHeight;
+      const x = Math.floor(Math.random() * maxX);
+      const y = Math.floor(Math.random() * maxY);
+      button.style.left = x + "px";
+      button.style.top = y + "px";
+    }
+
+    button.addEventListener("click", () => {
+      score++;
+      scoreDisplay.textContent = "Score: " + score;
+      moveButton();
+    });
+
+    const countdown = setInterval(() => {
+      timeLeft--;
+      timerDisplay.textContent = "Time: " + timeLeft;
+
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        button.disabled = true;
+        button.textContent = "Game Over";
+        alert("Time's up! Your score: " + score);
+      }
+    }, 1000);
+
+    moveButton(); // Initial position
+  </script>
+
+</body>
+</html>
