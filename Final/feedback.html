@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header id="page-header">
+    <h1 class="title">Welcome to Our Page</h1>
+
+    <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="muaythai.html">Muay Thai</a></li>
+            <li><a href="places.html">Places</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+  </header>
+
+  <div class="content">
+    <h2 class="title">Leave Your Feedback</h2>
+
+    <form id="feedbackForm">
+      <label for="name">Your Name (optional):</label><br>
+      <input type="text" id="name" placeholder="e.g. John Doe"><br><br>
+
+      <label for="feedback">Your Feedback:</label><br>
+      <textarea id="feedback" rows="4" placeholder="Write your feedback here..." required></textarea><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="content" id="feedbackList">
+    <h2 class="title">Thank You</h2>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Feedback Page. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

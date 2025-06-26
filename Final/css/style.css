@@ -1,8 +1,10 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
+
+/* Mobile */
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
@@ -13,7 +15,7 @@ body {
     background-image: url("pattern-bg.png");
     background-size: cover;
     color: #000000;
-    padding: 1rem;
+    padding: 15px 0;
     text-align: center;
     font-size: 2em;
     cursor: pointer;
@@ -21,12 +23,15 @@ body {
     box-shadow: 0 2px 5px rgb(139, 136, 136);
 }
 
+h1, h2, h3 {
+  color: rgb(3, 3, 3);
+  text-align: center;
+}
 
 .title {
     font-size: 2rem;
     letter-spacing: 0.05em;
 }
-
 
 .nav-list {
     list-style: none;
@@ -36,13 +41,11 @@ body {
     padding-top: 1rem;
 }
 
-
 .nav-list > li {
     padding: 0.25rem 0.75rem;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
 }
-
 
 .nav-list a {
     text-decoration: none;
@@ -50,12 +53,10 @@ body {
     font-size: 1rem;
 }
 
-
 .nav-list a:hover {
     color: #616161;
     background-color: #ffffff;
 }
-
 
 #Title {
     color: rgb(93, 78, 61);
@@ -66,7 +67,6 @@ body {
     color: rgb(53, 45, 36);
     text-align: center;
 }
-
 
 .image {
     border-radius: 15px;
@@ -79,13 +79,11 @@ body {
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
 }
 
-
 p {
     font-size: 0.9em;
     color: rgb(39, 39, 39);
     text-align: center;
 }
-
 
 footer {
     background-color: rgb(31, 31, 31);
@@ -94,19 +92,47 @@ footer {
     color: #311a1a;
 }
 
+ul.nav {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: center;
+}
+
+ul.nav li {
+  display: block;
+  margin: 10px 0;
+  padding: 0.25rem 0.25rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+ul.nav li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+ul.nav li a:hover {
+    color: #333333;
+    background-color: #ffffff;
+    transition: background-color 10.4s ease;
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
 a {
     color: rgb(0, 0, 0);
 }
-
-
 
 .titillium-web-extralight {
     font-family: "Titillium Web", sans-serif;
     font-weight: 200;
     font-style: normal;
 }
-
 
 .content {
     background-color: #b69e74;
@@ -115,4 +141,125 @@ a {
     border-radius: 6px;
     width: 60%;
     margin: 2rem auto;
+}
+
+.resources {
+    background-color: #b69e74;
+    padding: 1rem;
+    text-align: left;
+    border-radius: 6px;
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.resources li {
+    margin-bottom: 0.5rem;
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  max-width: 100%;
+  font-size: 1rem;
+}
+
+@media (max-width: 400px) {
+  .content {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    width: 70%;
+  }
+
+  form input,
+  form textarea {
+    font-size: 1.1rem;
+  }
+
+  form button {
+    width: fit-content;
+    align-self: center;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    width: 50%;
+  }
+
+  form {
+    padding: 1rem 2rem;
+  }
+
+  form input,
+  form textarea {
+    font-size: 1.1rem;
+  }
+}
+
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1em;
+  }
+
+  ul.nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  ul.nav li {
+    margin: 0 15px;
+    display: inline;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 0 20px;
+  }
+
+  .image {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 40px;
+  }
+
+  .image {
+    grid-column: span 3;
+  }
+
+  ul.nav {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
 }
